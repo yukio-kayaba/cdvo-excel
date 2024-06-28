@@ -1,0 +1,131 @@
+body{
+    background-color: black;
+}
+body::-webkit-scrollbar{
+    width: 0.5px;
+}
+.container{
+    height: 100vh;
+    padding: 1rem;
+}
+.logo img{
+    display: block;
+    margin: auto;
+    width: 400px;
+}
+#create_count{
+    cursor: pointer;
+    color: #2316e7;
+}
+.connect--fiends{
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 28px;
+}
+.form *{
+    display: block;
+}
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    max-width: 4500px;
+    padding: 1rem;
+    margin: 1rem auto;
+    background-color: rgb(222, 223, 224);
+    border-radius: 7px;
+    box-shadow: 1px 1px 10px rgb(138, 138, 133);
+    transition: height 0.3s ease;
+}
+
+
+
+.form input[type="email"],
+.form input[type="password"],
+.form input[type="text"],
+.form input[type="submit"]{
+    padding: 1rem;
+    width: 90%;
+    margin-bottom: 10px;
+    outline-color: rgb(130, 130, 167);
+    border: solid thin #dddfe2;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 17px;
+    text-align: left;
+}
+
+.form input::placeholder{
+    color: #615f5f;
+}
+
+.form input[type='submit']{
+    background-color: hsl(216, 25%, 40%);
+    text-align: center;
+    padding: .9rem .5rem;
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.border{
+    width: 90%;
+    height: 1px;
+    background-color: #131212;
+    margin: 20px auto;
+}
+.create-page{
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 17px;
+    color: #d3d0d0;
+}
+.create-pages{
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 17px;
+    color: #070707;
+}
+.create-page > a{
+    color: #dddbdb;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+@media screen and (min-width:450px){
+    .logo img{
+        width: 300px;
+    }
+    .connect--fiends{
+        font-size: 1.5rem;
+    }
+    .form input::placeholder{
+        font-size: 1rem;
+    }
+    .form input[type="submit"]{
+        font-size: 1.2rem;
+
+    }
+}
+@media screen and (min-width:900px){
+    .container{
+        max-width: 1400px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .container--profile{
+        width: 40%;
+        margin-left: 100px;
+        transform: translateY(-50px);
+    }
+    .logo img{
+        display: inline-block;
+        margin: 0;
+    }
+    .form{
+        width: 400px;
+    }
+}
