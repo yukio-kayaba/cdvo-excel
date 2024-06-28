@@ -2,16 +2,19 @@
     require_once("./controlador/principal.php");
     require "vendor/autoload.php";
     session_start();
-
-    if(isset($_GET['vista'])){
-        print_r($_GET['vista']);
-
-        if(method_exists("ModeloControlador",$_GET['vista'])){
-            ModeloControlador::{$_GET["vista"]}();
+    
+    if(isset($_SESSION['id_user'])){
+        if(isset($_GET['vista'])){
+            // print_r($_GET['vista']);
+            if(method_exists("ModeloControlador",$_GET['vista'])){
+                ModeloControlador::{$_GET["vista"]}();
+            }else{
+                ModeloControlador::error_pagina();
+            }
         }else{
-            ModeloControlador::error_pagina();
+            ModeloControlador::inicio();
         }
     }else{
-        ModeloControlador::inicio();
+        ModeloControlador::login();
     }
 ?>

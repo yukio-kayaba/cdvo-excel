@@ -41,15 +41,15 @@ $(document).ready(function(){
         console.log(direccion);
         // return;
         $.post(direccion,postdata,function(response){
-            // const datos = JSON.parse(response);
             console.log(response);
-            // if(datos.id > 0){
-            //     alert("datos correctos");
-            //     localStorage.setItem("valor_aux",JSON.stringify(datos));
-            //     window.location.reload();
-            // }else{
-            //     alert("datos incorrectos");
-            // }
+            const datos = response;
+            if(datos > 0){
+                alert("datos correctos");
+                localStorage.setItem("valor_aux",datos);
+                window.location.reload();
+            }else{
+                alert("datos incorrectos");
+            }
         });
     });
 });
